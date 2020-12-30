@@ -49,22 +49,25 @@ export default function App() {
     <View style={{
       backgroundColor: "#cecece",
       flex: 1,
-      flexDirection: "column"
+      justifyContent: "center",
+      flexDirection: "row",
+      alignItems: "center",
     }}>
       <View style={{
         backgroundColor: "dodgerblue",
         width: 100,
-        height: 100,
+        height: 50,
       }} />
       <View style={{
         backgroundColor: "gold",
         width: 100,
         height: 100,
+        alignSelf: "flex-start"
       }} />
       <View style={{
         backgroundColor: "tomato",
         width: 100,
-        height: 100,
+        height: 50,
       }} />
     </View>
   );
