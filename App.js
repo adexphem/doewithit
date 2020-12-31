@@ -1,7 +1,8 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import AppText from './app/components/AppText'
 
 export default function App() {
   return (
@@ -11,16 +12,7 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center"
       }}>
-      <View
-      style={{
-        backgroundColor: "dodgerblue",
-        width: 100,
-        height: 100,
-        borderWidth: 10,
-        borderColor: "royalblue",
-        borderRadius: 10
-      }}>
-      </View>
+      <AppText>Nigeria will be great again...</AppText>
     </View>
   );
 }
