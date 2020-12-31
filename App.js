@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons"
+
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import AppText from './app/components/AppText'
@@ -12,7 +14,8 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center"
       }}>
-      <AppText>Nigeria will be great again...</AppText>
+      <AppText>Mail a TX Address</AppText>
+      <MaterialCommunityIcons name="email" size={60} color="tomato"/>
     </View>
   );
 }
