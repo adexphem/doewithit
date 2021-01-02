@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-import AppText from './app/components/AppText'
+import AppText from './app/components/AppText';
+import AppButton from './app/components/AppButton'
 
 export default function App() {
   return (
@@ -12,10 +13,9 @@ export default function App() {
       style={{
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       }}>
-      <AppText>Mail a TX Address</AppText>
-      <MaterialCommunityIcons name="email" size={60} color="tomato"/>
+      <AppButton title="Login" onPress={() => console.log('tapped')} />
     </View>
   );
 }
