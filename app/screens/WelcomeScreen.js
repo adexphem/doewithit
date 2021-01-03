@@ -32,17 +32,19 @@ const styles = StyleSheet.create({
   logoContainer: {
     position: "absolute",
     top: 70,
-    alignItems: "center"
+    alignItems: "center",
+    width: "100%"
   },
   logo: {
     height: 70,
     width: 70,
   },
   tagline: {
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: "600",
     paddingVertical: 20,
-    textAlign: "center"
+    textAlign: "center",
+    alignSelf:"stretch"
   }
 });
 
