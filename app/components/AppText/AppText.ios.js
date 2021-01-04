@@ -9,7 +9,7 @@ const AppText = ({children, style}) => {
 
 const styles = StyleSheet.create({
   text: {
-    color: "tomato",
+    color: "#000",
     fontSize: 20,
     fontFamily: "Avenir",
   }
