@@ -11,7 +11,7 @@ const AppText = ({children, style}) => {
 const styles = StyleSheet.create({
   text: {
     color: "#000",
-    fontSize: 30,
+    fontSize: 16,
     fontFamily: "Roboto",
   }
 })
