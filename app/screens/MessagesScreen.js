@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList, SafeAreaView, Platform, StatusBar, StyleSheet } from 'react-native';
+import Constants from 'expo-constants'
 
 import ListItem from '../components/ListItem'
 
@@ -17,6 +18,7 @@ const messages = [
   image: require('../assets/femi.png')
   }
 ];
+const {statusBarHeight} = Constants;
 
 function MessagesScreen(props) {
   return (
@@ -38,7 +40,7 @@ function MessagesScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    paddingTop: statusBarHeight
   }
 })
 
