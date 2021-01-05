@@ -18,7 +18,8 @@ function ListItem({title, subTitle, image}) {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row"
+    flexDirection: "row",
+    padding: 15
   },
   image: {
     width: 70,
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 18,
     fontWeight: "400",
-    color: colors.lightGrey
+    color: colors.medium
   },
   title: {
     fontSize: 20,
