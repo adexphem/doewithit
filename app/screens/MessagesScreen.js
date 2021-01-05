@@ -1,8 +1,8 @@
 import React from 'react';
-import { FlatList, SafeAreaView, Platform, StatusBar, StyleSheet } from 'react-native';
-import Constants from 'expo-constants'
+import { FlatList } from 'react-native';
 
 import ListItem from '../components/ListItem'
+import Screen from '../components/Screen'
 
 const messages = [
   {
@@ -18,11 +18,10 @@ const messages = [
   image: require('../assets/femi.png')
   }
 ];
-const {statusBarHeight} = Constants;
 
-function MessagesScreen(props) {
+function MessagesScreen() {
   return (
-    <SafeAreaView style={styles.container}>
+    <Screen>
       <FlatList 
       data={messages}
       keyExtractor={messages => messages.id.toString()}
@@ -33,15 +32,8 @@ function MessagesScreen(props) {
           image={item.image}
         />}
     />
-    </SafeAreaView>
+    </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: statusBarHeight
-  }
-})
 
 export default MessagesScreen;
