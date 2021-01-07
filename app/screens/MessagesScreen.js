@@ -39,9 +39,27 @@ const handleItemPress = (item) => {
 
 function MessagesScreen() {
   const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleItemDelete = (message) => {
     setMessages(messages.filter(item => item.id !== message.id));
+  }
+
+  const loadRefreshedData = () => {
+    setMessages([
+      {
+        id: 2,
+        title: "O D C A",
+        description: "Organic Dark Chocolate Almonds",
+        image: require('../assets/femi.png')
+      },
+      {
+        id: 3,
+        title: "O R B N",
+        description: "Organic Raw Brazil Nuts",
+        image: require('../assets/femi.png')
+      },
+    ]);
   }
 
   return (
@@ -60,6 +78,8 @@ function MessagesScreen() {
           }
         />}
       ItemSeparatorComponent={ListItemSeparator}
+      refreshing={refreshing}
+      onRefresh={loadRefreshedData}
     />
     </Screen>
   );
