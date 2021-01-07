@@ -20,6 +20,10 @@ const messages = [
   }
 ];
 
+const handleItemPress = (item) => {
+  console.log('Item ===> ', item);
+}
+
 function MessagesScreen() {
   return (
     <Screen>
@@ -31,6 +35,7 @@ function MessagesScreen() {
           title={item.title}
           subTitle={item.description}
           image={item.image}
+          onPress={() => handleItemPress(item)}
         />}
       ItemSeparatorComponent={ListItemSeparator}
     />
