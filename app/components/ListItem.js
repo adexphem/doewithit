@@ -25,7 +25,8 @@ function ListItem({title, IconComponent, subTitle, image, onPress, swipeActions}
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    padding: 15
+    padding: 15,
+    backgroundColor: colors.white
   },
   detailsContainer: {
     justifyContent: "center",
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: "600"
+    fontWeight: "900"
   },
 })
 
