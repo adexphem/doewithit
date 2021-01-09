@@ -9,4 +9,5 @@ export default {
   danger: "#ff5252",
   dark: "#0c0c0c",
   pale: "#ffe66d",
+  red: "#ff0000",
 }
