@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Screen from "./app/components/Screen";
 import AppTextInput from "./app/components/AppTextInput";
