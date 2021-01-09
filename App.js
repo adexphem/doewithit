@@ -4,16 +4,15 @@ import Screen from "./app/components/Screen";
 import { Switch } from "react-native";
 
 import AppText from "./app/components/AppText";
+import AppPicker from "./app/components/AppPicker";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const [isNew, setIsNew] = useState(false)
   return (
     <Screen>
-      <Switch 
-        value={isNew}
-        onValueChange={value => setIsNew(value)}
-      />
-      <AppText>{isNew ? 'Is New' : 'Not New'}</AppText>
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screen>
   );
 }
