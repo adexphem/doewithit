@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   error: {
     color: colors.red,
     fontSize: 12,
-    marginTop: -10,
-    paddingLeft: 45
+    marginTop: -5,
+    paddingLeft: 5
   }
 })
 

@@ -6,7 +6,7 @@ function ImageInputList({ imageUris = [], onRemoveImage, onAddImage}) {
   const scrollView = useRef();
 
   return (
-    <View>
+    <View style={styles.wrapper}>
       <ScrollView ref={scrollView} horizontal onContentSizeChange={() => scrollView.current.scrollToEnd()}>
         <View style={styles.container}>
           {
@@ -32,6 +32,9 @@ const styles = StyleSheet.create({
   },
   image: {
     marginRight: 10
+  },
+  wrapper: {
+    marginVertical: 10,
   }
 })
 
