@@ -20,7 +20,7 @@ const categories = [
   {
     backgroundColor: "#fc5c65",
     icon: "floor-lamp",
-    label: "Furniture",
+    label: "Femi",
     value: 1,
   },
   {
