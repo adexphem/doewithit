@@ -42,7 +42,7 @@ export default function App() {
         <Stack.Screen 
           name="TweetDetails" 
           component={TweetDetails}
-          options={{title: "Changed Title"}}
+          options={({ route }) => ({title: route.params.id})}
         />
       </Stack.Navigator>
     )
