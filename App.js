@@ -22,7 +22,7 @@ export default function App() {
       <Text>Tweets</Text>
       <Button 
         title="View Tweet"
-        onPress={() => navigation.navigate("TweetDetails", {id: 9})}
+        onPress={() => navigation.navigate("TweetDetails", {id: 9, title: "Tacos List"})}
       />
     </Screen>
   )
@@ -42,7 +42,12 @@ export default function App() {
         <Stack.Screen 
           name="TweetDetails" 
           component={TweetDetails}
-          options={({ route }) => ({title: route.params.id})}
+          options={{
+            headerStyle: {
+              backgroundColor: "tomato"
+            },
+            headerTintColor: "white"
+          }}
         />
       </Stack.Navigator>
     )
