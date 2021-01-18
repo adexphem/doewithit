@@ -44,42 +44,7 @@ export default function App() {
   const Stack = createStackNavigator();
   const Tab = createBottomTabNavigator();
 
-  const TabNavigator = () => {
-    return (
-      <Tab.Navigator
-        tabBarOptions={{
-          activeBackgroundColor: "tomato",
-          activeTintColor: "white",
-          inactiveBackgroundColor: "#eee",
-          inactiveTintColor: "black"
-        }}
-      >
-        <Tab.Screen 
-          name="Feed" 
-          component={Tweets}
-          options={{
-            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="home" size={size} color={color}/>
-          }} 
-        />
-        <Tab.Screen 
-          name="Account" 
-          component={Account}
-          options={{
-            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="home" size={size} color={color}/>
-          }} 
-        />
-        <Tab.Screen 
-          name="Settings" 
-          component={Account}
-          options={{
-            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="account-settings" size={size} color={color}/>
-          }} 
-        />
-      </Tab.Navigator>
-    )
-  }
-
-  const StackNavigator = () => {
+  const HomeNavigator = () => {
     return (
       <Stack.Navigator>
         <Stack.Screen name="Tweets" component={Tweets} />
@@ -94,6 +59,49 @@ export default function App() {
           }}
         />
       </Stack.Navigator>
+    )
+  }
+
+  const AccountNavigator = () => {
+    return (
+      <Stack.Navigator>
+        <Stack.Screen name="Account" component={Account} />
+      </Stack.Navigator>
+    )
+  }
+
+  const TabNavigator = () => {
+    return (
+      <Tab.Navigator
+        tabBarOptions={{
+          activeBackgroundColor: "tomato",
+          activeTintColor: "white",
+          inactiveBackgroundColor: "#eee",
+          inactiveTintColor: "black"
+        }}
+      >
+        <Tab.Screen 
+          name="Feed" 
+          component={HomeNavigator}
+          options={{
+            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="home" size={size} color={color}/>
+          }} 
+        />
+        <Tab.Screen 
+          name="Account" 
+          component={AccountNavigator}
+          options={{
+            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="home" size={size} color={color}/>
+          }} 
+        />
+        <Tab.Screen 
+          name="Settings" 
+          component={Account}
+          options={{
+            tabBarIcon: ({size, color}) => <MaterialCommunityIcons name="account-settings" size={size} color={color}/>
+          }} 
+        />
+      </Tab.Navigator>
     )
   }
 
