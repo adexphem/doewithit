@@ -16,7 +16,7 @@ const menuItems = [
       color: colors.white,
       size: 40
     },
-    onPress: () => console.log('clicked listing...')
+    targetScreen: "LoginScreen"
   },
   {
     title: "My Messages",
@@ -26,11 +26,11 @@ const menuItems = [
       color: colors.white,
       size: 40
     },
-    onPress: () => console.log('clicked messages...')
+    targetScreen: "Messages"
   }
 ]
 
-function MyAccountScreen() {
+function MyAccountScreen({ navigation }) {
   return (
     <Screen style={{backgroundColor: colors.light}}>
       <View style={styles.profileHeader}>
@@ -56,7 +56,7 @@ function MyAccountScreen() {
                   size={item.icon.size}
                 />
               }
-              onPress={item.onPress}
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           }
           ItemSeparatorComponent={ItemSeparatorComponent}
