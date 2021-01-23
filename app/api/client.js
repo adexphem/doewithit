@@ -1,7 +1,7 @@
-import {create} from 'apisauce'
+import { create } from "apisauce";
 
 const apiClient = create({
-  baseURL: 'http://197.210.64.131:9000/api'
+  baseURL: "http://192.168.0.106:9000/api", // my PC I.P Address (or the BE api URL)
 });
 
 export default apiClient;
