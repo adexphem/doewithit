@@ -7,7 +7,6 @@ import colors from '../config/colors';
 
 function ListingDetailsScreen({ route }) {
   const listing = route.params;
-  console.log('listing  ', listing)
   return (
     <View>
       <Image style={styles.image} source={{ uri: listing.images[0].url }}/>
