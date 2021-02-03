@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 
+import ActivityIndicator from '../components/ActivityIndicator'
 import Button from '../components/AppButton'
 import Screen from '../components/Screen'
 import listingsApi from '../api/listings'
@@ -20,7 +21,7 @@ function ListingScreen({ navigation }) {
   const loadListings = async() => {
     setLoading(true);
     const response = await listingsApi.getListings();
-    setLoading(true);
+    setLoading(false);
 
     if(!response.ok) return setError(true);
 
@@ -36,19 +37,24 @@ function ListingScreen({ navigation }) {
           <Button title="Retry" onPress={loadListings} />
         </View>
       }
-      <ActivityIndicator animating={true} size="large" />
-      <FlatList
-        data={listings}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item }) => 
-          <Card
-            title={item.title}
-            subTitle={`$${item.price}`}
-            imageUrl={item.images[0].url}
-            onPress={() => navigation.navigate("ListingDetails", item)}
-          />
-        }
-      />
+
+      {loading && <ActivityIndicator visible={loading} />}
+      
+      {!loading && 
+        <FlatList
+          data={listings}
+          keyExtractor={item => item.id.toString()}
+          renderItem={({ item }) => 
+            <Card
+              title={item.title}
+              subTitle={`$${item.price}`}
+              imageUrl={item.images[0].url}
+              onPress={() => navigation.navigate("ListingDetails", item)}
+            />
+          }
+        />
+      }
+      
     </Screen>
   );
 }
